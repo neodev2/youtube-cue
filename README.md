@@ -31,7 +31,7 @@ instantiater.setAttribute('class', 'cueInstantiater');
 instantiater.innerHTML = 'New';
 document.body.appendChild(instantiater);
     
-instantiater.onclick = function(){
+instantiater.onmousedown = function(){
     instantiate();
 }
 
@@ -48,7 +48,7 @@ function instantiate(){
     trigger.innerHTML = video.currentTime;
     cont.appendChild(trigger);
     
-    trigger.onclick = function(){
+    trigger.onmousedown = function(){
         video.currentTime = this.innerHTML;
     }
     
@@ -56,7 +56,7 @@ function instantiate(){
     remove.innerHTML = 'x';
     cont.appendChild(remove);
     
-    remove.onclick = function(){
+    remove.onmousedown = function(){
         cont.remove();
     }
 }
